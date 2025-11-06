@@ -1,14 +1,21 @@
 {
-  "name": "infohub",
-  "version": "1.0.0",
-  "description": "Your everyday utilities in one place - Weather, Currency, Quotes",
-  "main": "index.js",
+  "name": "frontend",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
   "scripts": {
-    "dev": "cd backend/frontend && npm run dev",
-    "build": "cd backend/frontend && npm run build",
-    "vercel-deploy": "vercel --prod"
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
   },
-  "keywords": ["weather", "currency", "quotes", "utilities"],
-  "author": "ByteXL",
-  "license": "ISC"
+  "devDependencies": {
+    "typescript": "~5.9.3",
+    "vite": "^7.1.7"
+  },
+  "dependencies": {
+    "@types/react": "^19.2.2",
+    "@types/react-dom": "^19.2.2",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  }
 }
