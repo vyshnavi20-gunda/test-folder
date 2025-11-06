@@ -1,0 +1,25 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "backend/frontend/package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "backend/frontend/dist"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "/api/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/backend/frontend/dist/$1"
+    }
+  ],
+  "env": {
+    "WEATHER_API_KEY": "@weather_api_key"
+  }
+}
